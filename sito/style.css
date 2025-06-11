@@ -22,6 +22,7 @@ body, html {
   box-shadow: 2px 0 8px rgba(0, 0, 0, 0.3);
   box-sizing: border-box;
   overflow: hidden;
+  font-size:120%;
 }
 
 .sidebar img {
@@ -62,7 +63,6 @@ body, html {
   display: flex;
   align-items: center;
   padding: 0 24px;
-  font-family: 'Copperplate', serif;
   border-bottom: 1px solid #333;
   justify-content: space-between;
   position: relative;
