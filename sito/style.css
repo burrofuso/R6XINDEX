@@ -57,7 +57,7 @@ body, html {
 
 /* HEADER */
 .topbar {
-  height: 60px;
+  min-height: 60px;
   background-color: #252525;
   color: #eee;
   display: flex;
@@ -102,9 +102,9 @@ body, html {
 
 .containeropimg img{
   display: flex;
-  height: 800px;
-  width: 1420px;
-
+  height: 700px;
+  width: 1243px;
+  border: #ffffff 2px solid;
 }
 
 
