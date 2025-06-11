@@ -85,6 +85,29 @@ body, html {
   gap: 24px;
 }
 
+.containerop{
+  padding: 32px;
+  display: flex;
+  justify-content:center;
+  flex-direction:column;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.containeropattdef{
+  display: flex;
+  justify-content: space-around;
+  
+}
+
+.containeropimg img{
+  display: flex;
+  height: 800px;
+  width: 1420px;
+
+}
+
+
 /* Logo a destra nell'header */
 .mobile-logo {
   display: none;
