@@ -94,10 +94,40 @@ body, html {
   gap: 24px;
 }
 
-.containeropattdef{
-  display: flex;
-  justify-content: space-around;
+.op-button {
+  display: inline-block;
+  padding: 16px 32px;
+  background-color: #1b232f;
+  color: #ccc;
+  text-decoration: none;
+  font-weight: bold;
+  border: 2px solid #4f9fce;
+  transition: background-color 0.3s, color 0.3s;
+  text-align: center;
+  font-size: 16px;
+}
+
+
+.op-button:hover {
+  background-color: #5fa8d3;
+  color: white;
   
+}
+
+
+.left-button {
+  border-right: none;
+}
+
+.right-button {
+  border-left: none;
+}
+
+.containeropattdef {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 16px;
 }
 
 .containeropimg img{
