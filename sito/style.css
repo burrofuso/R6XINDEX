@@ -78,7 +78,7 @@ body, html {
 /* Container */
 .container {
   flex-grow: 1;
-  padding: 32px;
+  padding: 16px;
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
@@ -86,7 +86,7 @@ body, html {
 }
 
 .containerop{
-  padding: 32px;
+  padding: 16px;
   display: flex;
   justify-content:center;
   flex-direction:column;
@@ -101,7 +101,7 @@ body, html {
   color: #ccc;
   text-decoration: none;
   font-weight: bold;
-  border: 2px solid #4f9fce;
+  border: 2px solid #304054;
   transition: background-color 0.3s, color 0.3s;
   text-align: center;
   font-size: 16px;
@@ -128,6 +128,7 @@ body, html {
   justify-content: center;
   align-items: center;
   margin-top: 16px;
+  margin-bottom: 16px;
 }
 
 .containeropimg img{
