@@ -1,47 +1,48 @@
 -- TABELLE PRINCIPALI
 
-CREATE TABLE operators (
-    id INT NOT NULL IDENTITY(1,1) PRIMARY KEY,
-    name VARCHAR(100) NOT NULL
+CREATE TABLE OPERATORI (
+    idoperatore VARCHAR(3) NOT NULL PRIMARY KEY,
+    nome VARCHAR(50)
 );
 
-CREATE TABLE weapons (
-    id INT NOT NULL IDENTITY(1,1) PRIMARY KEY,
-    name VARCHAR(100) NOT NULL
+CREATE TABLE ARMI (
+    idarma VARCHAR(3) NOT NULL PRIMARY KEY,
+    nome VARCHAR(20)
 );
 
-CREATE TABLE utilities (
-    id INT NOT NULL IDENTITY(1,1) PRIMARY KEY,
-    name VARCHAR(100) NOT NULL
+CREATE TABLE UTILITIES (
+    idutility VARCHAR(2) NOT NULL PRIMARY KEY,
+    nome VARCHAR(20)
 );
 
-CREATE TABLE attachments (
-    id INT NOT NULL IDENTITY(1,1) PRIMARY KEY,
-    name VARCHAR(100) NOT NULL
+CREATE TABLE ATTACHMENTS (
+    idattachment VARCHAR(3) NOT NULL PRIMARY KEY,
+    nome VARCHAR(20) NOT NULL,
+    descrizione VARCHAR(100) NOT NULL
 );
 
--- TABELLE PONTE PER LE RELAZIONI N a N
+-- Tabelle ponte per relazioni n-n
 
-CREATE TABLE operator_weapon (
-    operator_id INT NOT NULL,
-    weapon_id INT NOT NULL,
-    PRIMARY KEY (operator_id, weapon_id),
-    FOREIGN KEY (operator_id) REFERENCES operators(id) ON DELETE CASCADE,
-    FOREIGN KEY (weapon_id) REFERENCES weapons(id) ON DELETE CASCADE
+CREATE TABLE OPERATORE_ARMA (
+    idoperatore VARCHAR(3),
+    idarma VARCHAR(3),
+    PRIMARY KEY (idoperatore, idarma),
+    FOREIGN KEY (idoperatore) REFERENCES OPERATORI(idoperatore) ON DELETE CASCADE,
+    FOREIGN KEY (idarma) REFERENCES ARMI(idarma) ON DELETE CASCADE
 );
 
-CREATE TABLE weapon_attachment (
-    weapon_id INT NOT NULL,
-    attachment_id INT NOT NULL,
-    PRIMARY KEY (weapon_id, attachment_id),
-    FOREIGN KEY (weapon_id) REFERENCES weapons(id) ON DELETE CASCADE,
-    FOREIGN KEY (attachment_id) REFERENCES attachments(id) ON DELETE CASCADE
+CREATE TABLE OPERATORE_UTILITY (
+    idoperatore VARCHAR(3),
+    idutility VARCHAR(2),
+    PRIMARY KEY (idoperatore, idutility),
+    FOREIGN KEY (idoperatore) REFERENCES OPERATORI(idoperatore) ON DELETE CASCADE,
+    FOREIGN KEY (idutility) REFERENCES UTILITIES(idutility) ON DELETE CASCADE
 );
 
-CREATE TABLE operator_utility (
-    operator_id INT NOT NULL,
-    utility_id INT NOT NULL,
-    PRIMARY KEY (operator_id, utility_id),
-    FOREIGN KEY (operator_id) REFERENCES operators(id) ON DELETE CASCADE,
-    FOREIGN KEY (utility_id) REFERENCES utilities(id) ON DELETE CASCADE
+CREATE TABLE ARMA_ATTACHMENT (
+    idarma VARCHAR(3),
+    idattachment VARCHAR(3),
+    PRIMARY KEY (idarma, idattachment),
+    FOREIGN KEY (idarma) REFERENCES ARMI(idarma) ON DELETE CASCADE,
+    FOREIGN KEY (idattachment) REFERENCES ATTACHMENTS(idattachment) ON DELETE CASCADE
 );
