@@ -4,7 +4,7 @@ body, html {
   min-height: 100%;
   font-family: 'Anuphan', sans-serif;
   background-color:#1f1f1f;
-  color: #222;
+  color: #eee;
 }
 
 .page-layout {
@@ -14,7 +14,7 @@ body, html {
 }
 
 .sidebar {
-  width: 200px;
+  max-width: 200px;
   background-color: #373737;
   display: flex;
   flex-direction: column;
@@ -85,6 +85,10 @@ body, html {
   gap: 24px;
 }
 
+.container h1{
+  color:#eee;
+}
+
 .containerop{
   padding: 16px;
   display: flex;
@@ -92,6 +96,10 @@ body, html {
   flex-direction:column;
   flex-wrap: wrap;
   gap: 24px;
+}
+
+.containeroperatori{
+  justify-content:space-evenly;
 }
 
 .op-button {
@@ -138,6 +146,14 @@ body, html {
   border: #ffffff 2px solid;
 }
 
+.tierlist img{ 
+  display: flex;
+  max-height: 1026px;
+  max-width: 909px;
+  margin-top: 16px;
+  margin-bottom: 16px;
+  border: #ffffff 2px solid;
+}
 
 /* Logo a destra nell'header */
 .mobile-logo {
@@ -193,6 +209,7 @@ body, html {
   max-height: 500px;
   animation: fadeInDown 0.3s ease forwards;
 }
+
 
 @keyframes fadeInDown {
   0% {
