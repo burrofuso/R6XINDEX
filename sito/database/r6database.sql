@@ -1,5 +1,5 @@
--- TABELLE PRINCIPALI
-use mystefanoburro;
+
+use my_stefanoburro;
 
 CREATE TABLE OPERATORI (
     idoperatore VARCHAR(3) NOT NULL PRIMARY KEY,
@@ -14,11 +14,11 @@ CREATE TABLE OPERATORI (
 CREATE TABLE ARMI (
     idarma VARCHAR(3) NOT NULL PRIMARY KEY,
     nome VARCHAR(20),
-    tipologia VARCHAR(20), /* es. fucile, pistola, mitragliatrice */
-    categoria VARCHAR(20), /* es. primaria, secondaria, speciale */
+    tipologia VARCHAR(20), 
+    categoria VARCHAR(20), 
     caricatore int,
     danni int,
-    descrizione VARCHAR(100),
+    descrizione VARCHAR(100)
 );
 
 CREATE TABLE UTILITIES (
@@ -32,10 +32,8 @@ CREATE TABLE ATTACHMENTS (
     idattachment VARCHAR(3) NOT NULL PRIMARY KEY,
     nome VARCHAR(20) NOT NULL,
     descrizione VARCHAR(100) NOT NULL,
-    categoria VARCHAR(20) NOT NULL                          /* se è: mirino (3x, 2.5x ,2x, 1x, no mirino),canna (rompifiamma, silenziatore, compensatore e freno di bocca), o l'impugnatura(verticale,orizzontale o diagonale) o speciale (con o senza mirino laser)   */
+    categoria VARCHAR(20) NOT NULL                          
 );
-
--- Tabelle ponte per relazioni n-n
 
 CREATE TABLE OPERATORE_ARMA (
     idoperatore VARCHAR(3),
