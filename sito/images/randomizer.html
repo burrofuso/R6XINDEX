@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>R6X WB</title>
+  <link rel="icon" type="image/x-icon" href="images/titlesiegex.jpg">
+  <link href="style.css" rel="stylesheet" />
+</head>
+<body>
+
+  <div class="page-layout">
+
+    <nav class="sidebar">
+      <img src="images/homepage.jpg" alt="Logo" />
+      <a href="r6index.html">HOME</a>
+      <a href="tierlist.html">TIERLIST</a>
+      <a href="operators.html">OPERATORS</a>
+      <a href="weapons.html">WEAPONS</a>
+      <a href="utilities.html">UTILITIES</a>
+      <a href="randomizer.html">RANDOMIZER</a>
+    </nav>
+
+    <div class="main-content">
+
+      <header class="topbar">
+        <button class="menu-toggle" aria-label="Apri menu">&#9776;</button>
+        <h1>RANDOMIZER</h1>
+        <img src="images/homepage.jpg" alt="Logo" class="mobile-logo" />
+      </header>
+
+      <nav id="mobileMenu" class="mobile-nav">
+        <a href="r6index.html">HOME</a>
+        <a href="tierlist.html">TIERLIST</a>
+        <a href="operators.html">OPERATORS</a>
+        <a href="weapons.html">WEAPONS</a>
+        <a href="utilities.html">UTILITIES</a>
+        <a href="randomizer.html">RANDOMIZER</a>
+      </nav>
+
+      <main class="container">
+        <section>
+          <h2>Scegli un ruolo</h2>
+          <form id="randomizerForm">
+            <label>
+              <input type="radio" name="ruolo" value="attacco" checked> Attacco
+            </label>
+            <label>
+              <input type="radio" name="ruolo" value="difesa"> Difesa
+            </label>
+            <button type="submit">Genera Loadout</button>
+          </form>
+
+          <div id="risultatoRandomizer" style="margin-top: 2rem;"></div>
+        </section>
+
+        <script>
+          document.getElementById('randomizerForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const ruolo = document.querySelector('input[name="ruolo"]:checked').value;
+            const risultatoDiv = document.getElementById('risultatoRandomizer');
+
+            fetch(`randomizer.php?ruolo=${ruolo}`)
+              .then(response => response.text())
+              .then(data => {
+                risultatoDiv.innerHTML = data;
+              })
+              .catch(error => {
+                risultatoDiv.innerHTML = '<p>Errore durante il caricamento dei dati.</p>';
+                console.error(error);
+              });
+          });
+        </script>
+      </main>
+
+      <footer class="footer">
+        <p>© 2025 - wendi e burro</p>
+      </footer>
+    </div>
+  </div>
+
+</body>
+</html>
