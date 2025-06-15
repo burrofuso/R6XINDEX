@@ -60,7 +60,7 @@
             const ruolo = document.querySelector('input[name="ruolo"]:checked').value;
             const risultatoDiv = document.getElementById('risultatoRandomizer');
 
-            fetch(`http://stefanoburro.altervista.org/randomizer.php?ruolo=${ruolo}`)
+            fetch(`https://stefanoburro.altervista.org/randomizer.php?ruolo=${ruolo}`)
               .then(response => response.text())
               .then(data => {
                 risultatoDiv.innerHTML = data;
