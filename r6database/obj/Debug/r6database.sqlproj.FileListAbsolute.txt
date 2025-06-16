@@ -1,0 +1,12 @@
+/workspaces/R6XINDEX/r6database/bin/Debug/r6database.dacpac
+/workspaces/R6XINDEX/r6database/bin/Debug/r6database.deps.json
+/workspaces/R6XINDEX/r6database/bin/Debug/r6database.dll
+/workspaces/R6XINDEX/r6database/bin/Debug/r6database.pdb
+/workspaces/R6XINDEX/r6database/obj/Debug/r6database.GeneratedMSBuildEditorConfig.editorconfig
+/workspaces/R6XINDEX/r6database/obj/Debug/r6database.sourcelink.json
+/workspaces/R6XINDEX/r6database/obj/Debug/Model.xml
+/workspaces/R6XINDEX/r6database/obj/Debug/refactor.xml
+/workspaces/R6XINDEX/r6database/obj/Debug/postdeploy.sql
+/workspaces/R6XINDEX/r6database/obj/Debug/predeploy.sql
+/workspaces/R6XINDEX/r6database/obj/Debug/r6database.dll
+/workspaces/R6XINDEX/r6database/obj/Debug/r6database.pdb
