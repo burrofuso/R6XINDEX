@@ -141,8 +141,8 @@ body, html {
 
 .containeropimg img{
   display: flex;
-  height: 700px;
-  width: 1243px;
+  max-height: 700px;
+  max-width: 1243px;
   border: #ffffff 2px solid;
 }
 
